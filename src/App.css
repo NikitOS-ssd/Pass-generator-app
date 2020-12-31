@@ -246,5 +246,7 @@ button {
   body {
     height: 100vh;
     overflow: hidden;
+    align-items: flex-start;
+    padding-top: 10%;
   }
 }
