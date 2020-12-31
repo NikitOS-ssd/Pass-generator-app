@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import "./App.css";
 
 function App() {
-  const [uppercaseChecked, setUppercaseChecked] = useState(true);
   const [result, setResult] = useState('');
+  const [uppercaseChecked, setUppercaseChecked] = useState(true);
   const [lowercaseChecked, setLowerChecked] = useState(false);
   const [numbersChecked, setNumbersChecked] = useState(false);
   const [symbolsChecked, setSymbolsChecked] = useState(false);
@@ -44,8 +44,8 @@ function App() {
     let generatedPassword = "";
 
     const randomArr = {
-      uppercaseChecked: getRandomLower,
-      lowercaseChecked: getRandomUpper,
+      uppercaseChecked: getRandomUpper,
+      lowercaseChecked: getRandomLower,
       numbersChecked: getRandomNumber,
       symbolsChecked: getRandomSymbol,
     };

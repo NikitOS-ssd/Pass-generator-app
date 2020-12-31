@@ -1,6 +1,6 @@
 {
-  "short_name": "Spletni Bar",
-  "name": "Spletni Bar & Kitchen",
+  "short_name": "Pass generator",
+  "name": "Password Generator",
   "icons": [
     {
       "src": "logo-favicon.ico",

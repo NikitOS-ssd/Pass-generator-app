@@ -51,3 +51,5 @@ firebase.json
 .firebaserc
 .gitignore
 firebase-debug.log
+public/manifest.json
+public/manifest.json
