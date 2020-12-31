@@ -6,6 +6,7 @@ function App() {
   const [lowercaseChecked, setLowerChecked] = useState(false);
   const [numbersChecked, setNumbersChecked] = useState(false);
   const [symbolsChecked, setSymbolsChecked] = useState(false);
+  const [passLength, setPassLength] = useState(16);
 
   const createPassword = () => {
     const obj = {upperCase: uppercaseChecked, lowercase: lowercaseChecked, numbers: numbersChecked, symbols: symbolsChecked};
@@ -39,9 +40,9 @@ function App() {
 
       <div className="length range_slider" data-min="4" data-max="32">
         <div className="length_title field-title" data-length="0">
-          length: 
+          length: <span>{passLength}</span>
         </div>
-        <input type="range" id="slider" min="4" max="32" step="1" />
+        <input type="range" id="slider" min="4" value={passLength} onChange={event => setPassLength(event.target.value)} max="32" step="1" />
       </div>
 
       <div className="settings">
@@ -50,25 +51,25 @@ function App() {
         </span>
         <div className="setting">
           <input type="checkbox" id="uppercase" checked={uppercaseChecked} onChange={() => setUppercaseChecked(!uppercaseChecked)} />
-          <label for="uppercase">
+          <label htmlFor="uppercase">
             Include Uppercase
           </label>
         </div>
         <div className="setting">
           <input type="checkbox" id="lowercase" checked={lowercaseChecked} onChange={() => setLowerChecked(!lowercaseChecked)} />
-          <label for="lowercase">
+          <label htmlFor="lowercase">
             Include Lowercase
           </label>
         </div>
         <div className="setting">
           <input type="checkbox" id="number" checked={numbersChecked} onChange={() => setNumbersChecked(!numbersChecked)} />
-          <label for="number">
+          <label htmlFor="number">
             Include Numbers
           </label>
         </div>
         <div className="setting">
           <input type="checkbox" id="symbol" checked={symbolsChecked} onChange={() => setSymbolsChecked(!symbolsChecked)} />
-          <label for="number">
+          <label htmlFor="symbol">
             Include Symbols
           </label>
         </div>

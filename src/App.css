@@ -9,9 +9,10 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: rgb(238,174,202);
+  background: rgb(238, 174, 202);
   background: radial-gradient(circle, rgba(238,174,202,1) 9%, rgba(148,187,233,1) 100%);
   font-family: Arial;
+  user-select: none;
 }
 button {
   border: 0;
@@ -240,4 +241,11 @@ button {
   font-size: 18px;
   color: rgba(0, 0, 0, 0.5);
   cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  body {
+    height: 100vh;
+    overflow: hidden;
+  }
 }
