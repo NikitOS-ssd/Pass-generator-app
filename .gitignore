@@ -50,3 +50,4 @@ yarn-error.log*
 firebase.json
 .firebaserc
 .gitignore
+firebase-debug.log
