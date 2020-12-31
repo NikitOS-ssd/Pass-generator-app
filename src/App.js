@@ -7,7 +7,7 @@ function App() {
   const [numbersChecked, setNumbersChecked] = useState(false);
   const [symbolsChecked, setSymbolsChecked] = useState(false);
 
-  const createPasswordFunction = () => {
+  const createPassword = () => {
     const obj = {upperCase: uppercaseChecked, lowercase: lowercaseChecked, numbers: numbersChecked, symbols: symbolsChecked};
     console.log(obj);
   }
@@ -73,7 +73,7 @@ function App() {
           </label>
         </div>
 
-        <button className="btn generate" id="generate" onClick={createPasswordFunction}>
+        <button className="btn generate" id="generate" onClick={createPassword}>
           Generate Password
         </button>
       </div>
