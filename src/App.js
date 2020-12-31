@@ -1,7 +1,18 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './App.css';
 
 function App() {
+  const [uppercaseChecked, setUppercaseChecked] = useState(false);
+  const [lowercaseChecked, setLowerChecked] = useState(false);
+  const [numbersChecked, setNumbersChecked] = useState(false);
+  const [symbolsChecked, setSymbolsChecked] = useState(false);
+
+  const createPasswordFunction = () => {
+    const obj = {upperCase: uppercaseChecked, lowercase: lowercaseChecked, numbers: numbersChecked, symbols: symbolsChecked};
+    console.log(obj);
+  }
+
+
   return (
     <div className="container">
       <h2 className="title">Password generator</h2>
@@ -38,31 +49,31 @@ function App() {
           setting
         </span>
         <div className="setting">
-          <input type="checkbox" id="uppercase" />
+          <input type="checkbox" id="uppercase" checked={uppercaseChecked} onChange={() => setUppercaseChecked(!uppercaseChecked)} />
           <label for="uppercase">
             Include Uppercase
           </label>
         </div>
         <div className="setting">
-          <input type="checkbox" id="lowercase" />
+          <input type="checkbox" id="lowercase" checked={lowercaseChecked} onChange={() => setLowerChecked(!lowercaseChecked)} />
           <label for="lowercase">
             Include Lowercase
           </label>
         </div>
         <div className="setting">
-          <input type="checkbox" id="number" />
+          <input type="checkbox" id="number" checked={numbersChecked} onChange={() => setNumbersChecked(!numbersChecked)} />
           <label for="number">
             Include Numbers
           </label>
         </div>
         <div className="setting">
-          <input type="checkbox" id="symbol" checked />
+          <input type="checkbox" id="symbol" checked={symbolsChecked} onChange={() => setSymbolsChecked(!symbolsChecked)} />
           <label for="number">
             Include Symbols
           </label>
         </div>
 
-        <button className="btn generate" id="generate">
+        <button className="btn generate" id="generate" onClick={createPasswordFunction}>
           Generate Password
         </button>
       </div>
